@@ -24,7 +24,6 @@ import Escrow from '../abis/Escrow.json';
 
 // Config
 import config from '.././config.json';
-import Home from './Home';
 
 function HomePage() {
   const [provider, setProvider] = useState(null)
