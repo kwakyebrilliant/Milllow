@@ -521,7 +521,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            {home.attributes[2].value}  rooms
+                            {home.attributes[2].value} rooms
                             </dd>
                             </div>
                         </div>
