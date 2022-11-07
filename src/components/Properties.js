@@ -463,7 +463,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            Ashongman
+                            {home.address}
                             </dd>
                         </div>
                         </dl>
