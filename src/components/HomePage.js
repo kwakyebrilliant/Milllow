@@ -24,6 +24,7 @@ import Escrow from '../abis/Escrow.json';
 
 // Config
 import config from '.././config.json';
+import Home from './Home';
 
 function HomePage() {
   const [provider, setProvider] = useState(null)
@@ -334,9 +335,10 @@ function HomePage() {
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-3'>
+                {homes.map((home, index) => (
 
-                     <div className="block overflow-hidden mx-4 my-4 rounded-2xl">
-                     <img className="object-cover w-full h-56" src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="" />
+                     <div className="block overflow-hidden mx-4 my-4 rounded-2xl" key={index} onClick={() => togglePop(home)}>
+                     <img className="object-cover w-full h-56" src={home.image} alt="" />
      
                       <div className="p-4 bg-gray-900">
                              <dl>
@@ -346,7 +348,7 @@ function HomePage() {
                                  </dt>
      
                                  <dd className="text-sm text-gray-100">
-                                 ETH 2/ $
+                                 {home.attributes[0].value} ETH
                                  </dd>
                              </div>
      
@@ -422,9 +424,14 @@ function HomePage() {
                          </div>
                      </div>
                    
-                
+                   ))}
                 
                 </div>
+                
+
+                {toggle && (
+                    <Home home={home} provider={provider} account={account} escrow={escrow} togglePop={togglePop} />
+                )}
 
             </div>
         </div>
