@@ -18,7 +18,7 @@ import Escrow from '../abis/Escrow.json';
 
 // Config
 import config from '.././config.json';
-import Home from './Home';
+import Details from './Details';
 
 
 const Properties = () => {
@@ -644,7 +644,7 @@ const Properties = () => {
      </div>
 
      {toggle && (
-        <Home home={home} provider={provider} account={account} escrow={escrow} togglePop={togglePop} />
+        <Details home={home} provider={provider} account={account} escrow={escrow} togglePop={togglePop} />
           )}
 
 
