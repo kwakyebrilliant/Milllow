@@ -453,7 +453,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="text-sm text-gray-100">
-                            ETH 2/ $ 240, 000
+                            {home.attributes[0].value} ETH / $ 24, 000
                             </dd>
                         </div>
 
@@ -479,11 +479,11 @@ const Properties = () => {
 
                             <div className="sm:ml-3 mt-1.5 sm:mt-0">
                             <dt className="text-gray-100">
-                                Parking
+                                Space
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            2 spaces
+                            {home.attributes[4].value} sqft
                             </dd>
                             </div>
                         </div>
@@ -502,7 +502,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            2 rooms
+                            {home.attributes[3].value} rooms
                             </dd>
                             </div>
                         </div>
@@ -521,7 +521,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            2 rooms
+                            {home.attributes[2].value}  rooms
                             </dd>
                             </div>
                         </div>
