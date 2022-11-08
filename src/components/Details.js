@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { ethers } from 'ethers';
 import { useEffect, useState } from 'react';
 
@@ -363,18 +364,58 @@ const Details = ({ home, provider, account, escrow, togglePop }) => {
                               </p>
                               
                               <div className="flex mt-8">
-                              <a
-                              className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
-                              onClick={() => {}}
-                              type="submit"
-                              >
-                              <span className="text-lg font-medium">Own Property</span>
-                              </a>
-                                
+                              {owner ? (
+                                <a
+                                className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
+                                onClick={buyHandler} disabled={hasBought}
+                                type="submit"
+                                >
+                                <span className="text-lg font-medium">
+                                Owned by {owner.slice(0, 6) + '...' + owner.slice(38, 42)}
+                                </span>
+                                </a>
+                              ) : (
+                             <div>
+                                {(account === inspector) ? (
+                                         <a
+                                         className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
+                                         onClick={inspectHandler} disabled={hasInspected}
+                                         type="submit"
+                                         >
+                                         <span className="text-lg font-medium">Approve Inspection</span>
+                                         </a>
+                                ) : 
+                                (account === lender) ? (
+                                    <a
+                                    className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
+                                    onClick={lendHandler} disabled={hasLended}
+                                    type="submit"
+                                    >
+                                    <span className="text-lg font-medium">Approve & Lend</span>
+                                    </a>
+                                ) :
+                                (account === seller) ? (
+                                    <a
+                                    className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
+                                    onClick={sellHandler} disabled={hasSold}
+                                    type="submit"
+                                    >
+                                    <span className="text-lg font-medium">Approve & Sell</span>
+                                    </a>
+                                ) : (
+                                <a
+                                    className="w-full text-center cursor-pointer items-center px-8 py-3 mt-8 text-white bg-green-600 border border-green-600 rounded hover:bg-transparent hover:text-green-600 active:text-green-500 focus:outline-none focus:ring"
+                                    onClick={buyHandler} disabled={hasBought}
+                                    type="submit"
+                                    >
+                                    <span className="text-lg font-medium">Buy Property</span>
+                                </a>
+                                )
+                                } 
+                             </div>
+                              )
+                            }
                               </div>
-
-                            
-
                               </form>
                           </div>
                           </div>
