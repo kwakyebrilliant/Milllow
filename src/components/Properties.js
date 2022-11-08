@@ -464,7 +464,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="font-medium text-gray-100">
-                            {home.address}
+                            {home.address.slice(0, 20)}
                             </dd>
                         </div>
                         </dl>
