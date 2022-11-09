@@ -224,7 +224,7 @@ const Details = ({ home, provider, account, escrow, togglePop }) => {
 
                           <div className="sticky top-0">
                           <strong className="border border-green-600 rounded-full tracking-wide px-3 font-medium py-0.5 text-xs bg-gray-100 text-green-600"> 
-                          For Sale
+                          {home.name}
                           </strong>
 
                               <div class="flex justify-between mt-8">
@@ -285,7 +285,7 @@ const Details = ({ home, provider, account, escrow, togglePop }) => {
                                   <div>
                                   <div className="prose max-w-none group-open:hidden">
                                       <p className='text-white'>
-                                      {home.description.slice(0, 200)}
+                                      {home.description.slice(0, 20)}
                                       </p>
                                   </div>
 
