@@ -4,12 +4,6 @@ import Footer from './Footer'
 
 import { FaSearch } from 'react-icons/fa'
 
-// import {
-//   OfficeBuildingIcon,
-//   HomeIcon,
-//   QuestionMarkCircleIcon
-// } from '@heroicons/react/solid'
-import { Link } from 'react-router-dom'
 import Navigation from './Navigation'
 
 // ABIs
@@ -23,12 +17,8 @@ import Details from './Details';
 
 const Properties = () => {
 
-  const [showModal, setShowModal] = useState(false);
-
   const [showModal2, setShowModal2] = useState(false);
   const [searchValue, setSearchValue] = useState('');
-
-  const [category, setCategory] = useState('all');
 
   const [provider, setProvider] = useState(null)
   const [escrow, setEscrow] = useState(null)
