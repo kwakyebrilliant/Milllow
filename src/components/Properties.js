@@ -35,7 +35,7 @@ const Properties = () => {
     const network = await provider.getNetwork()
 
     const realEstate = new ethers.Contract(config[network.chainId].realEstate.address, RealEstate, provider)
-    const totalSupply = await realEstate.totalSupply()
+    const totalSupply = await realEstate?.totalSupply()
     const homes = []
 
     for (var i = 1; i <= totalSupply; i++) {
