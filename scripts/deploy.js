@@ -48,13 +48,13 @@ async function main() {
   }
 
  // Listing properties...
- transaction = await escrow.connect(seller).list(1, buyer.address, tokens(20), tokens(10))
+ transaction = await escrow.connect(seller).list(1, buyer.address, tokens(0.03), tokens(0.01))
  await transaction.wait()
 
- transaction = await escrow.connect(seller).list(2, buyer.address, tokens(15), tokens(5))
+ transaction = await escrow.connect(seller).list(2, buyer.address, tokens(0.02), tokens(0.005))
  await transaction.wait()
 
- transaction = await escrow.connect(seller).list(3, buyer.address, tokens(10), tokens(5))
+ transaction = await escrow.connect(seller).list(3, buyer.address, tokens(0.01), tokens(0.005))
  await transaction.wait()
 
  console.log(`Finished.`)
