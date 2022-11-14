@@ -1,17 +1,17 @@
 <div align="center">
   <a href="https://ipfs.infura.io/ipfs/Qmade64cdA3YaNfThD8Pr5AVedwhxHa213AYbr5J5h7waH">
-    <img width="200" src="public/logo.png" alt="logo">
+    <img width="200" src="public/house.ico" alt="logo">
   </a>
 
-  <h3 align="center">Auditra</h3>
+  <h3 align="center">Movers</h3>
 
   <p align="center">
-    Auditing platform with Blockchain!
+    Properties Management platform with Blockchain!
     <br />
     <a href="https://github.com/kwakyebrilliant/Auditra2/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://auditra2.vercel.app/">View App</a>
+    <a href="https://moversv2.vercel.app/">View App</a>
     
   </p>
 </div>
