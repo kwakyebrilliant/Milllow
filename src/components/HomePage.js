@@ -218,8 +218,8 @@ function HomePage() {
 
                     <div className="mt-4 sm:pr-8">
                         <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
-                        provident a, ipsa maiores deleniti consectetur nobis et eaque.
+                        We have a reliable team on standby ready to provide answers to all questions
+                        with regards to a property or anything regarding the platform.
                         </p>
                     </div>
 
@@ -254,8 +254,8 @@ function HomePage() {
 
                     <div className="mt-4 sm:pr-8">
                         <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
-                        provident a, ipsa maiores deleniti consectetur nobis et eaque.
+                        We have a reliable team on standby ready to assist you on how
+                        to use the platform to acquire a property.
                         </p>
                     </div>
 
@@ -290,8 +290,8 @@ function HomePage() {
 
                     <div className="mt-4 sm:pr-8">
                         <p className="text-sm text-gray-500">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At velit illum
-                        provident a, ipsa maiores deleniti consectetur nobis et eaque.
+                        We have a reliable team on standby ready to provide you with more
+                        media regarding a property on the platform.
                         </p>
                     </div>
 
