@@ -125,7 +125,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="text-sm text-gray-100">
-                            {home.attributes[0].value} ETH / $ 24, 000
+                            {home.attributes[0].value} ETH
                             </dd>
                         </div>
 
