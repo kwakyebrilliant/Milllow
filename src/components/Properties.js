@@ -115,7 +115,7 @@ const Properties = () => {
                  
                  {homes.map((home, index) => (
                 <div className="block overflow-hidden mx-4 my-4 rounded-2xl" onClick={() => togglePop(home)} >
-                <img className="object-cover w-full h-56" src={home.image} alt="" />
+                <img className="object-cover w-full h-56" src={home.image} alt={home.name} />
 
                  <div className="p-4 bg-gray-900">
                         <dl>
@@ -125,7 +125,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="text-sm text-gray-100">
-                            {home.attributes[0].value} ETH
+                            ETH {home.attributes[0].value}
                             </dd>
                         </div>
 
@@ -246,7 +246,7 @@ const Properties = () => {
                             </dt>
 
                             <dd className="text-sm text-gray-100">
-                            {home.attributes[0].value} ETH / $ 24, 000
+                            ETH {home.attributes[0].value} 
                             </dd>
                         </div>
 
