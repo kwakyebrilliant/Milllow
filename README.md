@@ -20,21 +20,20 @@
 
 ## About The Project
 
-<img src="public/Screenshot.png" alt="Logo" width="" >
+<img src="public/screenshot.jpeg" alt="screenshot" width="" >
 
 # What it does
-Making use of blockchain technology, we present to you Auditra, an auditing platform that seeks simplify the auditing process with blockchain. By doing so, we offer you an easy way to perform the most challenging and complex audits more efficiently. And what we seek to achieve is to make the auditing processes more transparent to end users.
+Making use of blockchain technology, we present to you Movers, an property management platform that seeks simplify property management processes with blockchain. By doing so, we offer you an easy way to trade properties amongst users. And what we seek to achieve is to make the property management processes more transparent to end users.
 
-There are about two (2) user types (that is team and one auditor) that is captured on the platform. Among the two (2) user types, a user can perform an activity on the platform by choosing the user type they represent and then proceed to provide login details. The user is also to ensure that metamask is installed in their browser. Below are steps a user can undertake to perform an activity on the platform:
+There are about four (4) user types (that is buyer, seller, lender and approver) that is captured on the platform. Among the four (4) user types, a user can perform an activity on the platform by choosing the user type they represent and then proceed to provide to make the exchange of a property a smooth sail. The user is also to ensure that metamask is installed in their browser. Below are steps a user can undertake to perform an activity on the platform:
 
-- Click on connect wallet button in the navbar to load the user type modal.
-- Select the user type from the modal to fill login details.
-- Fill login details (login details: username: "user" password: "63CkBcD{B)h2>") and then click on submit button for a modal.
-- From the modal, click on continue to proceed to user dashboard. If metamask is not connected to the platform, the user will be prompted to connect or install metamask to continue the process.
+- The buyer can view a property and once interested can proceed to buy the property.
+- The seller can approve the sale of the property to enable the process, if not, the bid amount will be returned to the buyer. The seller after all other process will finally approve the sale to release the property to the buyer and then receive the bid amount.
+- The inspector will approve inspection once everything is in order for the next process.
+- The lender finally approve and lend the property for the seller to finally approve the property.
 
-Holla, you are now ready to use Auditra.
 
-All media that are added as supporting documents in creating and submitting an audit are stored on IPFS.
+All media are stored on IPFS.
 
 
 # Built With
@@ -98,36 +97,45 @@ The chain ID should be 80001. If you have a localhost rpc set up, you may need t
 To deploy to Polygon test or main networks, update the configurations located in **hardhat.config.js** to use a private key and, optionally, deploy to a private RPC like Infura.
 
 ```javascript
-require('@nomiclabs/hardhat-waffle');
-const privateKey = '';
-
+// require("@nomicfoundation/hardhat-toolbox");
+/* hardhat.config.js */
+require("@nomiclabs/hardhat-waffle");
+const fs = require("fs");
+// const privateKey = fs.readFileSync("secret.txt").toString();
+const projectId = "8b7ba5517c414450a93ec7334975a7fe";
+const privatekey1 =
+  "";
+const privatekey2 =
+  "";
+const privatekey3 =
+  "";
+const privatekey4 =
+  "";
 module.exports = {
-  defaultNetwork: 'hardhat',
-  networks: {
-    hardhat: {
-      chainId: 1337,
-    },
-    mumbai: {
-      url: 'https://rpc-mumbai.maticvigil.com',
-      accounts: [privateKey],
-    },
-    matic: {
-      url: 'https://polygon-mainnet.g.alchemy.com/v2/OPAn_R_vIjcnM9MeCVVuvET9glKc1Y_l',
-      accounts: [privateKey],
-    },
-  },
-  solidity: {
-    version: '0.8.4',
-      paths: {
-    artifacts: './src/artifacts',
-  },
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 1,
-      },
-    },
-  },
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      chainId: 1337,
+    },
+
+    mainet: {
+      url: `https://palm-mainnet.infura.io/v3/${projectId}`,
+      // accounts: [privateKey],
+    },
+    matic: {
+      url: "https://polygon-mumbai.g.alchemy.com/v2/2bGIFu-iEnl9RvAOTe1ddZI2gBnuYQGS",
+      accounts: [privatekey1, privatekey2, privatekey3, privatekey4],
+    },
+  },
+  solidity: {
+    version: "0.8.17",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
 };
 ```
 
@@ -145,4 +153,3 @@ Distributed under the MIT License.
 # Contact
 - Brilliant Kwakye - https://twitter.com/a_moah__
 - Mends Albert - https://twitter.com/mendalbert
-- Daniel Sarkodie - https://twitter.com/AbrantepaSark
