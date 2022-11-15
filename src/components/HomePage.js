@@ -291,7 +291,7 @@ function HomePage() {
                     <div className="mt-4 sm:pr-8">
                         <p className="text-sm text-gray-500">
                         We have a reliable team on standby ready to provide you with more
-                        media regarding a property on the platform.
+                        media regarding a property on the platform. 
                         </p>
                     </div>
 

@@ -1,8 +1,4 @@
-// require("@nomicfoundation/hardhat-toolbox");
-/* hardhat.config.js */
 require("@nomiclabs/hardhat-waffle");
-const fs = require("fs");
-// const privateKey = fs.readFileSync("secret.txt").toString();
 const projectId = "8b7ba5517c414450a93ec7334975a7fe";
 const privatekey1 =
   "";
